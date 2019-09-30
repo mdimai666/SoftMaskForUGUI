@@ -410,7 +410,7 @@ namespace Coffee.UIExtensions
 				var canvas = sm.graphic.canvas;
 				if (canvas.renderMode == RenderMode.WorldSpace)
 				{
-					var cam = canvas.worldCamera;
+					var cam = canvas.worldCamera??Camera.main;
 					Matrix4x4 nowsVP = cam.projectionMatrix * cam.worldToCameraMatrix;
 
 #if UNITY_2018_1_OR_NEWER
